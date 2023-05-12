@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="E:\weather1\css\style1.css" rel="stylesheet">
+    <title>Weather forecast App</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="E:\weather1\js\jquery-3.6.4.min.js"></script>
+</head>             
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div>
+                <form class="search" id="search">
+                    <input type="text" id="Query" placeholder="search...">
+                    <button class="btn4"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="weather-icon">
+                    <img src="E:\weather1\photo\cloudy-day.png" id="icon">
+                </div>
+                <div class="temprature">
+                    <h1 id="temp">0</h1>
+                    <span class="temp-unit">°C</span>
+                </div>
+                <div class="d_t">
+                    <div class="date-time">
+                        <p id="week">21-03-2002</p>
+                    </div>
+                    <div class="date-time">
+                        <p id="date">Monday</p>
+                    </div>
+                </div>
+                <div class="date-time">
+                    <p id="date-time">12:00</p>
+                </div>
+
+
+
+
+                <div class="divider"></div>
+                <div class="condition-rain">
+                    <div class="condition">
+                        <i class="fas fa-cloud"></i>
+                        <div class="condition" id="condition">condition</div>
+                    </div>
+                    <div class="rain">
+                        <i class="fas fa-tint"></i>
+                        <div id="rain">perc - 0%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="location">
+                <div class="location-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="location-text">
+                    <p class="location">location</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="op">
+            <nav class="navbar">
+                <ul class="options">
+                        <button class="hourly ">today</button>
+                        <button class="week action">week</button>
+                    </ul>
+                    <ul class="options units">
+                        <button class="celcius action" id="tt">Login</button>
+                    </ul>
+                </nav>
+                <div class="main">
+                <div class="cards" id="weather-cards">
+                    <div class="card">
+                        <h2 class="day-name">Monday</h2>
+                        <div class="card-icon">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="day-name">Tuesday</h2>
+                        <div class="card-icon">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="day-name">Wednesday</h2>
+                        <div class="card-icon">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="day-name">Thursday</h2>
+                        <div class="card-icon">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="day-name">friday</h2>
+                        <div class="card-icon">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="day-name">Saturday</h2>
+                        <div class="card-icon">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="day-name">sunday</h2>
+                        <div class="card-icon">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlights">
+                    <h2 class="heading">today's higlights</h2>
+                    <div class="cards">
+                        <div class="card2">
+                            <h4 class="card-heading">UV Index</h4>
+                            <div class="content">
+                                <p class="uv-index">0</p>
+                                <p class="uv-text">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Wind Status</h4>
+                            <div class="content">
+                                <p class="wind-speed">0</p>
+                                <p class="">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Sunrise & Sunset</h4>
+                            <div class="content">
+                                <p class="sunrise">0</p>
+                                <p class="sunset">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Humidity</h4>
+                            <div class="content">
+                                <p class="humidity">0</p>
+                                <p class="humidity-status">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Visibility</h4>
+                            <div class="content">
+                                <p class="Visibility">0</p>
+                                <p class="visibility-status">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Air Quality</h4>
+                            <div class="content">
+                                <p class="air-Quality">0</p>
+                                <p class="air-Quality-status">Low
+                                <p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main1">
+                <div class="cards" id="weather-cards">
+                    <div class="card3">
+                        <h2 class="day-name">00:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">01:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">02:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">03:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">04:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">05:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">06:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">07:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">08:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">09:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">10:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">11:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">12:00 AM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">01:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">02:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">03:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">04:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">05:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">06:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">07:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">08:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">09:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">10:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <h2 class="day-name">11:00 PM</h2>
+                        <div class="card-icon1">
+                            <img src="E:\weather1\photo\storm.png" alt="">
+                        </div>
+
+                        <div class="day-temp1">
+                            <h2 class="temp">32</h2>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlights">
+                    <h2 class="heading">today's higlights</h2>
+                    <div class="cards">
+                        <div class="card2">
+                            <h4 class="card-heading">UV Index</h4>
+                            <div class="content">
+                                <p class="uv-index">0</p>
+                                <p class="uv-text">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Wind Status</h4>
+                            <div class="content">
+                                <p class="wind-speed">0</p>
+                                <p class="">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Sunrise & Sunset</h4>
+                            <div class="content">
+                                <p class="sunrise">0</p>
+                                <p class="sunset">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Humidity</h4>
+                            <div class="content">
+                                <p class="humidity">0</p>
+                                <p class="humidity-status">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Visibility</h4>
+                            <div class="content">
+                                <p class="Visibility">0</p>
+                                <p class="visibility-status">Low</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <h4 class="card-heading">Air Quality</h4>
+                            <div class="content">
+                                <p class="air-Quality">0</p>
+                                <p class="air-Quality-status">Low
+                                <p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/">
+                <div class="imgcontainer"></div>
+                <div class="container">
+                    <label for="uname" class="label7"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" class="text" name="uname">
+
+                    <label for="psw" class="label8"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" class="text" id="pc">
+
+                    <button class="btn7" type="submit" >Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button " class="btn9">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+
+        <div id="mode">
+            <div id="mode_1">
+                <div id="out">&times;</div>
+                <div id="as"><b>Username:</b></div>
+                <div id="ass"><b>Password :</b></div>
+                <div id="us">User Login Successfully</div>
+    
+            </div>
+        </div>
+    
+
+        
+        <script src="E:/weather1/js/events.js"></script>
+        <script src="E:/weather1/js/wc.js"></script>
+</body>
+
+</html>
